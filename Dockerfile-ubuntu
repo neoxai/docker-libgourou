@@ -15,8 +15,8 @@ RUN apt-get update && \
 WORKDIR /usr/src
 # RUN apt-get install -y valgrind
 
-RUN git clone git://soutade.fr/libgourou.git \
-  && cd libgourou \
+RUN git clone https://github.com/neoxai/libgourou.git 
+RUN cd libgourou \
   && make BUILD_STATIC=1 STATIC_UTILS=1
 
 FROM ubuntu:jammy as release
